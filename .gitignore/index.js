@@ -165,7 +165,7 @@ bot.on('message', message => {
 		.addField("Lien", "[Ajoute moi !](https://lightlifefr.wix.com/rainbow)", true)
 		.setColor("0xF4D14F")
 		.setFooter("BOT CRÉÉ PAR MISTIGRIX")
-        message.member.sendEmbed(embed3);
+        message.sendEmbed(embed3);
     }
 
     if (message.content.includes("xD") || message.content.includes("lol") || message.content.includes("mdr")) {
