@@ -67,10 +67,7 @@ bot.on('message', message => {
     }
     
     if (message.content === "Je vous présente <@480019387093483522> !"){
-	     if (!message.member.hasPermission("MANAGE_MESSAGES")) {
-                return;
-            }
-bot.user.sendMessage('Bonjour tout le monde ! :happy:')
+message.channel.send('Bonjour tout le monde ! :happy:')
     }
 	
 if (message.content === prefix + "aide"){
