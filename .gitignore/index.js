@@ -128,11 +128,6 @@ bot.on('message', message => {
           //          message.channel.sendFile(file.file);
       //        });
     // }
-	if (message.content.includes("TG") || message.content.includes("FTG") || message.content.includes("NTM") || message.content.includes("FDP") || message.content.includes("PUTE") || message.content.includes("SALOPE") || message.content.includes("CONNARD") || message.content.includes("SALOP") || message.content.includes("PUTAIN") || message.content.includes("TA GUEULE") || message.content.includes("BITE") || message.content.includes("CUL") || message.content.includes("tg") || message.content.includes("ftg") || message.content.includes("ntm") || message.content.includes("fdp") || message.content.includes("pute") || message.content.includes("salope") || message.content.includes("connard") || message.content.includes("salop") || message.content.includes("putain") || message.content.includes("ta gueule") || message.content.includes("bite") || message.content.includes("cul")){
-        	if (message.channel.nsfw === false) {
-		message.react(bot.emojis.get("433316429044121601"));
-	}
-	}
 	
     if (message.content.startsWith(prefix + "supersondage")) {
 	
