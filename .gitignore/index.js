@@ -68,28 +68,16 @@ bot.on('message', message => {
     
     if (message.content === prefix + "aide"){
         var embed2 = new Discord.RichEmbed()
-		.setThumbnail("http://i.imgur.com/9eIhQvf.gif")
+		.setThumbnail("https://media.giphy.com/media/RpZUut1c4BpOE/source.gif")
 		.setTitle("AIDE")
 		.setDescription("COMMANDES")
-		.addField("UTILES", "`[info` (pour voir les informations du serveurs)\n`[invite` (pour inviter le bot sur votre serv)\n`*avatar` (pour avoir votre PP)\n`*aide` (bah... pour l'aide quoi.)\n`*sondage <question>` (pour faire un sondage)")
+		.addField("UTILES", "`[info` (pour voir les informations du serveurs)\n`[aide` (bah... pour l'aide quoi.)")
 		.addField("JEUX", "\`*multiark\` (Pour faire une recherche de joueurs sur ARK)")
 		.setColor("0xF4D14F")
 		.setFooter("BOT CRÉÉ PAR MISTIGRIX")
         message.channel.sendEmbed(embed2);
     }
     
-    
-    if (message.content === prefix + "news"){
-        var embed4 = new Discord.RichEmbed()
-		.setThumbnail("http://i.imgur.com/9eIhQvf.gif")
-		.setTitle("VOICI MES NOUVEAUTÉES !")
-		.setDescription("\n")
-		.addField("AJOUTS", "📌Ajout de la commandes : \`*aide nsfw\` Pour voir des trucs cochons (**seulement dans un channel nsfw**)\nAvec en prime des commandes cochones à découvrir avec celle-ci ! :D")
-		.addField("PATCH", "🌀 Des fois je crashais (encore +) 🌀")
-		.setColor("0xF4D14F")
-		.setFooter("Version 1.5")
-        message.channel.sendEmbed(embed4);
-    }	
 	
 	
     if (msg.startsWith(prefix + "MULTIARK")) {
@@ -111,44 +99,6 @@ bot.on('message', message => {
         message.channel.sendEmbed(embed)
         .then(function (message) {
         message.react(multi);
-     });
-     }
-
-   //  if (msg.startsWith(prefix + "CHAT")) {
-              //message.delete();
-
-              //var options = {
-                //method: "GET",
-                //url: `http://aws.random.cat/meow`,
-              //};
-            //  
-          //    request.get(options, (error, response, body) => {
-        //            var file = JSON.parse(body);
-          //          message.channel.sendFile(file.file);
-      //        });
-    // }
-	
-    if (message.content.startsWith(prefix + "supersondage")) {
-	
-	if (!message.member.hasPermission("MANAGE_MESSAGES")) {
-                return;
-	}
-            
-	message.delete();
-	    
-        let args = message.content.split(" ").slice(1);
-        let thingToEcho = args.join(" ");
-        var embed = new Discord.RichEmbed()
-            .setTitle("SUPER SONDAGE")
-	    .setDescription("Question de " + message.author + " pour @everyone")
-	    .setThumbnail("https://qph.fs.quoracdn.net/main-qimg-49b8b38b8301a67c52f18ab79d927827.webp")
-            .addField(thingToEcho + " ", "Répondre avec :white_check_mark: ou :x:\n ", false)
-            .setColor("0xB40404")
-            .setTimestamp();
-        message.channel.sendEmbed(embed)
-        .then(function (message) {
-        message.react("✅");
-        message.react("❌");
      });
      }
 
