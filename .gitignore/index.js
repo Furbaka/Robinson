@@ -66,12 +66,15 @@ bot.on('message', message => {
 
     }
     
-   if (message.content === "Je vous présente <@480019387093483522> !"){
-message.channel.send("Bonjour tout le monde ! :happy:")
+    if (message.content === "Je vous présente <@480019387093483522> !"){
+	     if (!message.member.hasPermission("MANAGE_MESSAGES")) {
+                return;
+            }
+message.channel.send('Bonjour tout le monde ! :happy:')
     }
 	
 if (message.content === prefix + "aide"){
-        
+    var embed2 = new Discord.RichEmbed()
 		.setThumbnail("https://media.giphy.com/media/RpZUut1c4BpOE/source.gif")
 		.setTitle("AIDE")
 		.setDescription("COMMANDES")
