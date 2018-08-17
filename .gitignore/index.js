@@ -66,8 +66,8 @@ bot.on('message', message => {
 
     }
     
-    if (message.content === "Je vous présente <@480019387093483522> !"){
-message.channel.send('Bonjour tout le monde ! :happy:')
+    if (message.startsWith("Je vous présente <@480019387093483522> !")){
+message.channel.send("Bonjour tout le monde ! :happy:")
     }
 	
 if (message.content === prefix + "aide"){
