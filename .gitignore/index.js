@@ -5,7 +5,7 @@ const request = require('request');
 var prefix = ("[");
 
 bot.on('ready', () => {
-	bot.user.setGame(bot.guilds.size + "[aide");
+	bot.user.setGame("[aide");
 	bot.user.setUsername("ROBinson");
 });
 
@@ -71,11 +71,10 @@ bot.on('message', message => {
 		.setThumbnail("http://i.imgur.com/9eIhQvf.gif")
 		.setTitle("AIDE")
 		.setDescription("COMMANDES")
-		.addField("UTILES", "`[info` (pour voir les informations du serveurs)\n`[invite` (pour inviter le bot sur votre serv)\n`*avatar` (pour avoir votre PP)\n`*aide` (bah... pour l'aide quoi.)\n`*news` (pour voir mes nouveautées)\n`*sondage <question>` (pour faire un sondage)")
-		.addField("JEUX", "\`*multi <NOM DU JEU>\` (Pour faire une recherche de joueurs)")
-		.addField("PLUS", "`*aide nsfw` pour voir des trucs cochons (**seulement dans un channel nsfw**)", true)
+		.addField("UTILES", "`[info` (pour voir les informations du serveurs)\n`[invite` (pour inviter le bot sur votre serv)\n`*avatar` (pour avoir votre PP)\n`*aide` (bah... pour l'aide quoi.)\n`*sondage <question>` (pour faire un sondage)")
+		.addField("JEUX", "\`*multiark\` (Pour faire une recherche de joueurs sur ARK)")
 		.setColor("0xF4D14F")
-		.setFooter("BOT CRÉÉ PAR MISTIGRIX, qui a caché des easter eggs...")
+		.setFooter("BOT CRÉÉ PAR MISTIGRIX")
         message.channel.sendEmbed(embed2);
     }
     
