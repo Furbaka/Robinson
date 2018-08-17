@@ -70,7 +70,7 @@ bot.on('message', message => {
 	     if (!message.member.hasPermission("MANAGE_MESSAGES")) {
                 return;
             }
-message.channel.send('Bonjour tout le monde ! :happy:')
+message.channel.send('Bonjour tout le monde ! ^^')
     }
 	
 if (message.content === prefix + "aide"){
